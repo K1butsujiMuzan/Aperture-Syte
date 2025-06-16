@@ -21,6 +21,8 @@
   --layer-main: 0;
   --layer-level1: 100;
   --layer-level2: 200;
+
+  --font-size-14px: clamp(0.7rem, 1vw ,0.875rem);
 }
 
 *{
@@ -29,6 +31,25 @@
   box-sizing: border-box;
   font-size: 16px;
   font-family: var(--font-primary) !important;
+  overflow-x: hidden;
+}
+
+.icons{
+  width: 100%;
+  justify-content: flex-end;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-inline: 1rem;
+
+  &-part{
+    display: flex;
+    gap: 0.5rem;
+
+    h4{
+      font-size: 0.75rem;
+    }
+  }
 }
 
 button{
@@ -40,8 +61,24 @@ button{
   cursor: pointer;
 }
 
-a{
+a, h1, h2, h3, h4, h5, h6{
   text-decoration: none;
+  font-weight: 400;
+}
+
+p{
+  line-height: 1.4;
+  color: var(--color-light-grey);
+  font-size: var(--font-size-14px);
+}
+
+h1{
+  font-size: clamp(1.5rem, 2.08vw, 2.5rem);
+}
+
+h2{
+  color: var(--color-light-grey);
+  font-size: clamp(1rem, 1.25vw, 1.5rem);
 }
 
 @media (hover:hover) {
@@ -53,6 +90,15 @@ a{
       width: 100%;
     }
   }
+}
+
+.container{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .header{
@@ -99,6 +145,111 @@ a{
 
     &-burger{
       display: none;
+    }
+  }
+}
+
+.main{
+  background-color: var(--color-black);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.photographer{
+  background-image: url("./Images/Aperture-Studios.png");
+  padding-top: min(35%, 31.4rem);
+  align-items: center;
+  text-align: center;
+
+  h1{
+    font-size: clamp(2rem, 2.81vw, 3.375rem);
+    line-height: 1.5;
+  }
+
+  h3{
+    color: var(--color-light-grey);
+    font-size: var(--font-size-14px);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  p{
+    margin-bottom: 1rem;
+    margin-top: min(0.5rem, 0.8%);
+    width: clamp(15rem, 70%, 36.25rem);
+  }
+}
+
+.about_us{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 6.25rem;
+  width: 100%;
+  text-align: center;
+
+  h2{
+    margin-block: 1rem 3rem;
+    width: 90%;
+  }
+
+  &__grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding-inline: 1rem;
+
+    &-card:nth-child(1){
+      background-image: url("./Images/aboutus/1.png");
+    }
+    &-card:nth-child(2){
+      background-image: url("./Images/aboutus/2.png");
+    }
+    &-card:nth-child(3){
+      background-image: url("./Images/aboutus/3.png");
+    }
+    &-card:nth-child(4){
+      background-image: url("./Images/aboutus/4.png");
+    }
+
+    &-card{
+      max-width: 36rem;
+      aspect-ratio: 1 / 1.04;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+      padding: 2rem;
+
+      h3{
+        text-transform: uppercase;
+        font-size: var(--font-size-14px);
+      }
+
+      p{
+        margin-block: 1rem;
+        width: 100%;
+      }
+
+      button{
+        padding: 0.5rem 1rem 0.5rem 0.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        span{
+          display: block;
+          border-radius: 50%;
+          height: 2rem;
+          aspect-ratio: 1;
+          background-color: var(--color-black);
+        }
+      }
     }
   }
 }
@@ -165,6 +316,24 @@ a{
       top: 50%;
       width: 100%;
       transform: translateY(-50%) rotate(45deg);
+    }
+  }
+
+  .about_us{
+    padding-block: 3.25rem;
+
+    &__grid{
+      grid-template-columns: 1fr;
+
+      &-card{
+        padding: 1rem;
+
+        button{
+          span{
+            height: 1rem;
+          }
+        }
+      }
     }
   }
 }
