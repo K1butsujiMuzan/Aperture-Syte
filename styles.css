@@ -39,6 +39,8 @@
   flex-wrap: wrap;
   gap: 1rem;
   padding-inline: 1rem;
+  overflow: hidden;
+  color: var(--color-white);
 }
 .icons-part {
   display: flex;
@@ -56,10 +58,18 @@ button {
   font-size: 1rem;
   cursor: pointer;
 }
+button span {
+  display: block;
+  border-radius: 50%;
+  height: 2rem;
+  aspect-ratio: 1;
+  background-color: var(--color-black);
+}
 
-a, h1, h2, h3, h4, h5, h6 {
+a, h1, h2, h3, h4, h5, h6, p {
   text-decoration: none;
   font-weight: 400;
+  overflow: hidden;
 }
 
 p {
@@ -78,6 +88,32 @@ h2 {
   font-size: clamp(1rem, 1.25vw, 1.5rem);
 }
 
+.container {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 136.25rem;
+  width: 100%;
+}
+
+.container-background {
+  align-items: flex-end;
+  justify-content: flex-end;
+  aspect-ratio: 2.4/1;
+  position: relative;
+  padding-bottom: min(3rem, 5%);
+  min-height: 25rem;
+}
+.container-background__text {
+  position: absolute;
+  top: 50%;
+  width: min(18.75rem, 90%);
+  margin-inline: min(3.75rem, 5%);
+}
+
 @media (hover: hover) {
   button:hover {
     background-color: var(--color-light-grey);
@@ -86,15 +122,6 @@ h2 {
     width: 100%;
   }
 }
-.container {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  padding-bottom: 3rem;
-  display: flex;
-  flex-direction: column;
-}
-
 .header {
   width: 100%;
   background-color: var(--color-dark);
@@ -212,6 +239,7 @@ h2 {
 .about_us__grid-card h3 {
   text-transform: uppercase;
   font-size: var(--font-size-14px);
+  color: var(--color-white);
 }
 .about_us__grid-card p {
   margin-block: 1rem;
@@ -223,12 +251,15 @@ h2 {
   align-items: center;
   gap: 0.5rem;
 }
-.about_us__grid-card button span {
-  display: block;
-  border-radius: 50%;
-  height: 2rem;
-  aspect-ratio: 1;
-  background-color: var(--color-black);
+
+.sunset {
+  background-image: url("./Images/Sunset.png");
+}
+.sunset h3 {
+  color: var(--color-white);
+  font-size: var(--font-size-14px);
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 @media (max-width: 56rem) {
