@@ -17,6 +17,7 @@
   --transition-main: 0.2s;
   --border-radius: 14px;
   --max-width-container: 90rem;
+  --max-width-main: 136.25rem;
   --layer-main: 0;
   --layer-level1: 100;
   --layer-level2: 200;
@@ -57,6 +58,10 @@ button {
   letter-spacing: 0.4px;
   font-size: 1rem;
   cursor: pointer;
+  padding: 0.5rem 1rem 0.5rem 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 button span {
   display: block;
@@ -88,6 +93,13 @@ h2 {
   font-size: clamp(1rem, 1.25vw, 1.5rem);
 }
 
+h3 {
+  color: var(--color-light-grey);
+  font-size: var(--font-size-14px);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
 .container {
   background-repeat: no-repeat;
   background-position: center;
@@ -95,7 +107,7 @@ h2 {
   padding-bottom: 3rem;
   display: flex;
   flex-direction: column;
-  max-width: 136.25rem;
+  max-width: var(--max-width-main);
   width: 100%;
 }
 
@@ -181,12 +193,6 @@ h2 {
   font-size: clamp(2rem, 2.81vw, 3.375rem);
   line-height: 1.5;
 }
-.photographer h3 {
-  color: var(--color-light-grey);
-  font-size: var(--font-size-14px);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
 .photographer p {
   margin-bottom: 1rem;
   margin-top: min(0.5rem, 0.8%);
@@ -237,19 +243,11 @@ h2 {
   padding: 2rem;
 }
 .about_us__grid-card h3 {
-  text-transform: uppercase;
-  font-size: var(--font-size-14px);
   color: var(--color-white);
 }
 .about_us__grid-card p {
   margin-block: 1rem;
   width: 100%;
-}
-.about_us__grid-card button {
-  padding: 0.5rem 1rem 0.5rem 0.5rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
 }
 
 .sunset {
@@ -257,12 +255,47 @@ h2 {
 }
 .sunset h3 {
   color: var(--color-white);
-  font-size: var(--font-size-14px);
-  text-transform: uppercase;
-  letter-spacing: 2px;
+}
+
+.tools {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  max-width: var(--max-width-main);
+}
+.tools__right {
+  background-image: url("./Images/tools-that-we-use.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  aspect-ratio: 1.36/1;
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-bottom: min(3rem, 5%);
+}
+.tools__left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tools__left p {
+  width: min(26.66vw, 32rem);
+}
+.tools__left h1 {
+  color: var(--color-white);
+}
+.tools__left button {
+  margin-top: min(5%, 2rem);
 }
 
 @media (max-width: 56rem) {
+  .main button {
+    overflow-y: hidden;
+  }
+  .main button span {
+    height: 1rem;
+  }
   .header__inner-right {
     z-index: var(--layer-level1);
     display: flex;
@@ -329,8 +362,21 @@ h2 {
   .about_us__grid-card {
     padding: 1rem;
   }
-  .about_us__grid-card button span {
-    height: 1rem;
+  .tools {
+    grid-template-columns: 1fr;
+  }
+  .tools__left {
+    padding-block: 10%;
+  }
+  .tools__left-inner {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .tools__left-inner p {
+    width: 90%;
   }
 }
 

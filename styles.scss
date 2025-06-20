@@ -18,6 +18,7 @@
   --transition-main: 0.2s;
   --border-radius: 14px;
   --max-width-container: 90rem;
+  --max-width-main: 136.25rem;
   --layer-main: 0;
   --layer-level1: 100;
   --layer-level2: 200;
@@ -52,7 +53,6 @@
     }
   }
 }
-
 button{
   background-color: var(--color-white);
   border: none;
@@ -60,6 +60,10 @@ button{
   letter-spacing: 0.4px;
   font-size: 1rem;
   cursor: pointer;
+  padding: 0.5rem 1rem 0.5rem 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 
   span{
     display: block;
@@ -92,6 +96,13 @@ h2{
   font-size: clamp(1rem, 1.25vw, 1.5rem);
 }
 
+h3{
+  color: var(--color-light-grey);
+  font-size: var(--font-size-14px);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
 .container{
   background-repeat: no-repeat;
   background-position: center;
@@ -99,7 +110,7 @@ h2{
   padding-bottom: 3rem;
   display: flex;
   flex-direction: column;
-  max-width: 136.25rem;
+  max-width: var(--max-width-main);
   width: 100%;
 }
 
@@ -196,13 +207,6 @@ h2{
     line-height: 1.5;
   }
 
-  h3{
-    color: var(--color-light-grey);
-    font-size: var(--font-size-14px);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-  }
-
   p{
     margin-bottom: 1rem;
     margin-top: min(0.5rem, 0.8%);
@@ -256,8 +260,6 @@ h2{
       padding: 2rem;
 
       h3{
-        text-transform: uppercase;
-        font-size: var(--font-size-14px);
         color: var(--color-white);
       }
 
@@ -266,12 +268,7 @@ h2{
         width: 100%;
       }
 
-      button{
-        padding: 0.5rem 1rem 0.5rem 0.5rem;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-      }
+
     }
   }
 }
@@ -281,13 +278,54 @@ h2{
 
   h3{
     color: var(--color-white);
-    font-size: var(--font-size-14px);
-    text-transform: uppercase;
-    letter-spacing: 2px;
+  }
+}
+
+.tools{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  max-width: var(--max-width-main);
+
+  &__right{
+    background-image: url("./Images/tools-that-we-use.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    aspect-ratio: 1.36 / 1;
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-bottom: min(3rem, 5%);
+  }
+
+  &__left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p{
+      width: min(26.66vw, 32rem);
+    }
+
+    h1{
+      color: var(--color-white);
+    }
+    button{
+      margin-top: min(5%, 2rem);
+    }
   }
 }
 
 @media (max-width: 56rem) {
+  .main{
+    button{
+      overflow-y: hidden;
+      span{
+        height: 1rem;
+      }
+    }
+  }
   .header__inner-right{
     z-index: var(--layer-level1);
     display: flex;
@@ -360,11 +398,25 @@ h2{
 
       &-card{
         padding: 1rem;
+      }
+    }
+  }
 
-        button{
-          span{
-            height: 1rem;
-          }
+  .tools{
+    grid-template-columns: 1fr;
+
+    &__left{
+      padding-block: 10%;
+
+      &-inner{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        p{
+          width: 90%;
         }
       }
     }
