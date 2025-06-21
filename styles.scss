@@ -97,7 +97,7 @@ h2{
 }
 
 h3{
-  color: var(--color-light-grey);
+  color: var(--color-white);
   font-size: var(--font-size-14px);
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -212,13 +212,17 @@ h3{
     margin-top: min(0.5rem, 0.8%);
     width: clamp(15rem, 70%, 36.25rem);
   }
+
+  h3{
+    color: var(--color-light-grey);
+  }
 }
 
 .about_us{
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-block: 6.25rem;
+  padding-block: clamp(3.25rem, 7.81vh, 6.25rem);
   width: 100%;
   text-align: center;
 
@@ -259,10 +263,6 @@ h3{
       align-items: flex-start;
       padding: 2rem;
 
-      h3{
-        color: var(--color-white);
-      }
-
       p{
         margin-block: 1rem;
         width: 100%;
@@ -275,10 +275,12 @@ h3{
 
 .sunset{
   background-image: url("./Images/Sunset.png");
-
-  h3{
-    color: var(--color-white);
-  }
+}
+.monstera{
+  background-image: url("./Images/Monstera.png");
+}
+.starfall{
+  background-image: url("./Images/Starfall.png");
 }
 
 .tools{
@@ -314,6 +316,37 @@ h3{
     button{
       margin-top: min(5%, 2rem);
     }
+
+    h3{
+      color: var(--color-light-grey);
+    }
+
+  }
+}
+
+.past-clients{
+  max-width: var(--max-width-main);
+  width: 100%;
+  padding-block: clamp(3.25rem, 7.81vh, 6.25rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  h2{
+    margin-block: 1rem 3rem;
+    width: 90%;
+  }
+
+  &__icons{
+    margin-top: min(10%, 3rem);
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10%;
+    row-gap: 2rem;
+    flex-wrap: wrap;
   }
 }
 
@@ -390,15 +423,11 @@ h3{
     }
   }
 
-  .about_us{
-    padding-block: 3.25rem;
+  .about_us__grid{
+    grid-template-columns: 1fr;
 
-    &__grid{
-      grid-template-columns: 1fr;
-
-      &-card{
-        padding: 1rem;
-      }
+    &-card{
+      padding: 1rem;
     }
   }
 
