@@ -448,10 +448,11 @@ h3{
       }
     }
   }
+
   .header__inner-right{
     z-index: var(--layer-level1);
     display: flex;
-    position: absolute;
+    position: fixed;
     inset: 0;
     transform: translateX(100%);
     background-color: var(--color-dark);
