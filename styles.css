@@ -34,6 +34,10 @@
   font-family: var(--font-primary) !important;
 }
 
+.logo-link {
+  display: flex;
+}
+
 .icons {
   width: 100%;
   justify-content: flex-end;
@@ -63,6 +67,7 @@ button {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  transition: all var(--transition-main);
 }
 button span {
   display: block;
@@ -130,6 +135,9 @@ h3 {
 @media (hover: hover) {
   button:hover {
     background-color: var(--color-light-grey);
+  }
+  button:active {
+    transform: scale(0.97, 0.97);
   }
   .header__inner-right a:hover::after {
     width: 100%;
@@ -370,6 +378,7 @@ h3 {
   flex-direction: column;
   gap: min(10%, 1.5rem);
   width: 50%;
+  align-items: flex-start;
 }
 .footer__inner-left p {
   width: 90%;
