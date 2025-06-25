@@ -1,29 +1,13 @@
+@import "blocks.scss";
+@import "text.scss";
+@import "root.scss";
+
 @font-face {
   font-family: "Poppins";
-  src: url("fonts/PoppinsRegular.woff2") format("woff2");
+  src: url("/fonts/PoppinsRegular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-}
-
-:root{
-  --color-dark: #181818;
-  --color-white: #ffffff;
-  --color-light-grey: #C0C0C0;
-  --color-black: #000000;
-  --color-border: #E5E7EB;
-  --color-light: #F9FAFB;
-  --border-light: 1px solid var(--color-border);
-  --font-primary: "Poppins" , sans-serif;
-  --transition-main: 0.2s;
-  --border-radius: 14px;
-  --max-width-container: 90rem;
-  --max-width-main: 136.25rem;
-  --layer-main: 0;
-  --layer-level1: 100;
-  --layer-level2: 200;
-  --font-size-14px: clamp(0.7rem, 1vw ,0.875rem);
-  --padding-containers: clamp(3.25rem, 7.81vw, 6.25rem);
 }
 
 *{
@@ -37,104 +21,6 @@
 
 .logo-link {
   display: flex;
-}
-
-.icons{
-  width: 100%;
-  justify-content: flex-end;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  padding-inline: 1rem;
-  overflow: hidden;
-  color: var(--color-white);
-
-  &-part{
-    display: flex;
-    gap: 0.5rem;
-
-    h4{
-      font-size: 0.75rem;
-    }
-  }
-}
-
-button{
-  background-color: var(--color-white);
-  border: none;
-  border-radius: var(--border-radius);
-  letter-spacing: 0.4px;
-  font-size: 1rem;
-  cursor: pointer;
-  padding: 0.5rem 1rem 0.5rem 0.5rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  transition: all var(--transition-main);
-
-  span{
-    display: block;
-    border-radius: 50%;
-    height: 2rem;
-    aspect-ratio: 1;
-    background-color: var(--color-black);
-  }
-}
-
-a, h1, h2, h3, h4, h5, h6, p{
-  text-decoration: none;
-  font-weight: 400;
-  overflow: hidden;
-}
-
-p{
-  color: var(--color-light-grey);
-  font-size: var(--font-size-14px);
-  line-height: 1.4;
-}
-
-h1{
-  color: var(--color-white);
-  font-size: clamp(1.5rem, 2.08vw, 2.5rem);
-}
-
-h2{
-  color: var(--color-light-grey);
-  font-size: clamp(1rem, 1.25vw, 1.5rem);
-}
-
-h3{
-  color: var(--color-white);
-  font-size: var(--font-size-14px);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-.container{
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  padding-bottom: 3rem;
-  display: flex;
-  flex-direction: column;
-  max-width: var(--max-width-main);
-  width: 100%;
-}
-
-.container-background{
-  align-items: flex-end;
-  justify-content: flex-end;
-  aspect-ratio: 2.4 / 1;
-  position: relative;
-  padding-bottom: min(3rem, 5%);
-  min-height: 25rem;
-
-  &__text{
-    position: absolute;
-    top: 50%;
-    width: min(18.75rem, 90%);
-    margin-inline: min(3.75rem, 5%);
-  }
 }
 
 @media (hover:hover) {
@@ -207,7 +93,7 @@ h3{
 }
 
 .photographer{
-  background-image: url("./Images/Aperture-Studios.png");
+  background-image: url("/Images/Aperture-Studios.png");
   padding-top: min(35%, 31.4rem);
   align-items: center;
   text-align: center;
@@ -248,16 +134,16 @@ h3{
     padding-inline: 1rem;
 
     &-card:nth-child(1){
-      background-image: url("./Images/aboutus/1.png");
+      background-image: url("/Images/aboutus/1.png");
     }
     &-card:nth-child(2){
-      background-image: url("./Images/aboutus/2.png");
+      background-image: url("/Images/aboutus/2.png");
     }
     &-card:nth-child(3){
-      background-image: url("./Images/aboutus/3.png");
+      background-image: url("/Images/aboutus/3.png");
     }
     &-card:nth-child(4){
-      background-image: url("./Images/aboutus/4.png");
+      background-image: url("/Images/aboutus/4.png");
     }
 
     &-card{
@@ -284,13 +170,13 @@ h3{
 }
 
 .sunset{
-  background-image: url("./Images/Sunset.png");
+  background-image: url("/Images/Sunset.png");
 }
 .monstera{
-  background-image: url("./Images/Monstera.png");
+  background-image: url("/Images/Monstera.png");
 }
 .starfall{
-  background-image: url("./Images/Starfall.png");
+  background-image: url("/Images/Starfall.png");
 }
 
 .tools{
@@ -300,7 +186,7 @@ h3{
   max-width: var(--max-width-main);
 
   &__right{
-    background-image: url("./Images/tools-that-we-use.png");
+    background-image: url("/Images/tools-that-we-use.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -331,16 +217,6 @@ h3{
   }
 }
 
-.black-container{
-  max-width: var(--max-width-main);
-  width: 100%;
-  padding-block: var(--padding-containers);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
 .past-clients{
   h2{
     margin-block: 1rem 3rem;
@@ -364,20 +240,6 @@ h3{
   h1{
     width: 90%;
   }
-}
-
-.container-footer{
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.white-line{
-  height: 2px;
-  width: 100%;
-  background-color: var(--color-white);
 }
 
 .footer{

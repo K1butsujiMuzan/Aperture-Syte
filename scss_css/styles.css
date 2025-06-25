@@ -1,61 +1,3 @@
-@font-face {
-  font-family: "Poppins";
-  src: url("fonts/PoppinsRegular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-:root {
-  --color-dark: #181818;
-  --color-white: #ffffff;
-  --color-light-grey: #C0C0C0;
-  --color-black: #000000;
-  --color-border: #E5E7EB;
-  --color-light: #F9FAFB;
-  --border-light: 1px solid var(--color-border);
-  --font-primary: "Poppins" , sans-serif;
-  --transition-main: 0.2s;
-  --border-radius: 14px;
-  --max-width-container: 90rem;
-  --max-width-main: 136.25rem;
-  --layer-main: 0;
-  --layer-level1: 100;
-  --layer-level2: 200;
-  --font-size-14px: clamp(0.7rem, 1vw ,0.875rem);
-  --padding-containers: clamp(3.25rem, 7.81vw, 6.25rem);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-size: 16px;
-  overflow-x: hidden;
-  font-family: var(--font-primary) !important;
-}
-
-.logo-link {
-  display: flex;
-}
-
-.icons {
-  width: 100%;
-  justify-content: flex-end;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  padding-inline: 1rem;
-  overflow: hidden;
-  color: var(--color-white);
-}
-.icons-part {
-  display: flex;
-  gap: 0.5rem;
-}
-.icons-part h4 {
-  font-size: 0.75rem;
-}
-
 button {
   background-color: var(--color-white);
   border: none;
@@ -75,6 +17,74 @@ button span {
   height: 2rem;
   aspect-ratio: 1;
   background-color: var(--color-black);
+}
+
+.container {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  max-width: var(--max-width-main);
+  width: 100%;
+}
+
+.container-background {
+  align-items: flex-end;
+  justify-content: flex-end;
+  aspect-ratio: 2.4/1;
+  position: relative;
+  padding-bottom: min(3rem, 5%);
+  min-height: 25rem;
+}
+.container-background__text {
+  position: absolute;
+  top: 50%;
+  width: min(18.75rem, 90%);
+  margin-inline: min(3.75rem, 5%);
+}
+
+.black-container {
+  max-width: var(--max-width-main);
+  width: 100%;
+  padding-block: var(--padding-containers);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.container-footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.white-line {
+  height: 2px;
+  width: 100%;
+  background-color: var(--color-white);
+}
+
+.icons {
+  width: 100%;
+  justify-content: flex-end;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-inline: 1rem;
+  overflow: hidden;
+  color: var(--color-white);
+}
+.icons-part {
+  display: flex;
+  gap: 0.5rem;
+}
+.icons-part h4 {
+  font-size: 0.75rem;
 }
 
 a, h1, h2, h3, h4, h5, h6, p {
@@ -106,30 +116,44 @@ h3 {
   letter-spacing: 2px;
 }
 
-.container {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  padding-bottom: 3rem;
-  display: flex;
-  flex-direction: column;
-  max-width: var(--max-width-main);
-  width: 100%;
+:root {
+  --color-dark: #181818;
+  --color-white: #ffffff;
+  --color-light-grey: #C0C0C0;
+  --color-black: #000000;
+  --color-border: #E5E7EB;
+  --color-light: #F9FAFB;
+  --border-light: 1px solid var(--color-border);
+  --font-primary: "Poppins" , sans-serif;
+  --transition-main: 0.2s;
+  --border-radius: 14px;
+  --max-width-container: 90rem;
+  --max-width-main: 136.25rem;
+  --layer-main: 0;
+  --layer-level1: 100;
+  --layer-level2: 200;
+  --font-size-14px: clamp(0.7rem, 1vw ,0.875rem);
+  --padding-containers: clamp(3.25rem, 7.81vw, 6.25rem);
 }
 
-.container-background {
-  align-items: flex-end;
-  justify-content: flex-end;
-  aspect-ratio: 2.4/1;
-  position: relative;
-  padding-bottom: min(3rem, 5%);
-  min-height: 25rem;
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/PoppinsRegular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
-.container-background__text {
-  position: absolute;
-  top: 50%;
-  width: min(18.75rem, 90%);
-  margin-inline: min(3.75rem, 5%);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  overflow-x: hidden;
+  font-family: var(--font-primary) !important;
+}
+
+.logo-link {
+  display: flex;
 }
 
 @media (hover: hover) {
@@ -193,7 +217,7 @@ h3 {
 }
 
 .photographer {
-  background-image: url("./Images/Aperture-Studios.png");
+  background-image: url("/Images/Aperture-Studios.png");
   padding-top: min(35%, 31.4rem);
   align-items: center;
   text-align: center;
@@ -230,16 +254,16 @@ h3 {
   padding-inline: 1rem;
 }
 .about_us__grid-card:nth-child(1) {
-  background-image: url("./Images/aboutus/1.png");
+  background-image: url("/Images/aboutus/1.png");
 }
 .about_us__grid-card:nth-child(2) {
-  background-image: url("./Images/aboutus/2.png");
+  background-image: url("/Images/aboutus/2.png");
 }
 .about_us__grid-card:nth-child(3) {
-  background-image: url("./Images/aboutus/3.png");
+  background-image: url("/Images/aboutus/3.png");
 }
 .about_us__grid-card:nth-child(4) {
-  background-image: url("./Images/aboutus/4.png");
+  background-image: url("/Images/aboutus/4.png");
 }
 .about_us__grid-card {
   max-width: 36rem;
@@ -260,15 +284,15 @@ h3 {
 }
 
 .sunset {
-  background-image: url("./Images/Sunset.png");
+  background-image: url("/Images/Sunset.png");
 }
 
 .monstera {
-  background-image: url("./Images/Monstera.png");
+  background-image: url("/Images/Monstera.png");
 }
 
 .starfall {
-  background-image: url("./Images/Starfall.png");
+  background-image: url("/Images/Starfall.png");
 }
 
 .tools {
@@ -278,7 +302,7 @@ h3 {
   max-width: var(--max-width-main);
 }
 .tools__right {
-  background-image: url("./Images/tools-that-we-use.png");
+  background-image: url("/Images/tools-that-we-use.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -303,16 +327,6 @@ h3 {
   color: var(--color-light-grey);
 }
 
-.black-container {
-  max-width: var(--max-width-main);
-  width: 100%;
-  padding-block: var(--padding-containers);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
 .past-clients h2 {
   margin-block: 1rem 3rem;
   width: 90%;
@@ -333,20 +347,6 @@ h3 {
 }
 .help h1 {
   width: 90%;
-}
-
-.container-footer {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.white-line {
-  height: 2px;
-  width: 100%;
-  background-color: var(--color-white);
 }
 
 .footer {

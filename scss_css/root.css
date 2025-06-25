@@ -1,0 +1,21 @@
+:root {
+  --color-dark: #181818;
+  --color-white: #ffffff;
+  --color-light-grey: #C0C0C0;
+  --color-black: #000000;
+  --color-border: #E5E7EB;
+  --color-light: #F9FAFB;
+  --border-light: 1px solid var(--color-border);
+  --font-primary: "Poppins" , sans-serif;
+  --transition-main: 0.2s;
+  --border-radius: 14px;
+  --max-width-container: 90rem;
+  --max-width-main: 136.25rem;
+  --layer-main: 0;
+  --layer-level1: 100;
+  --layer-level2: 200;
+  --font-size-14px: clamp(0.7rem, 1vw ,0.875rem);
+  --padding-containers: clamp(3.25rem, 7.81vw, 6.25rem);
+}
+
+/*# sourceMappingURL=root.css.map */
