@@ -1,6 +1,6 @@
-@import "blocks.scss";
-@import "text.scss";
-@import "root.scss";
+@use "blocks.scss";
+@use "text.scss";
+@use "root.scss";
 
 @font-face {
   font-family: "Poppins";
@@ -372,6 +372,9 @@
   .header__inner-burger.Active{
     height: 2rem;
     aspect-ratio: 1;
+    position: fixed;
+    top: 2rem;
+    right: 1.25rem;
 
     span::before{
       top: 50%;

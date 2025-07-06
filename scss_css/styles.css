@@ -462,6 +462,9 @@ h3 {
   .header__inner-burger.Active {
     height: 2rem;
     aspect-ratio: 1;
+    position: fixed;
+    top: 2rem;
+    right: 1.25rem;
   }
   .header__inner-burger.Active span::before {
     top: 50%;
