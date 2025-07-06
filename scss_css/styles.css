@@ -217,7 +217,7 @@ h3 {
 }
 
 .photographer {
-  background-image: url("/Images/Aperture-Studios.png");
+  background-image: url("/Images/backgrounds/Aperture-Studios.png");
   padding-top: min(35%, 31.4rem);
   align-items: center;
   text-align: center;
@@ -284,15 +284,15 @@ h3 {
 }
 
 .sunset {
-  background-image: url("/Images/Sunset.png");
+  background-image: url("/Images/backgrounds/Sunset.png");
 }
 
 .monstera {
-  background-image: url("/Images/Monstera.png");
+  background-image: url("/Images/backgrounds/Monstera.png");
 }
 
 .starfall {
-  background-image: url("/Images/Starfall.png");
+  background-image: url("/Images/backgrounds/starfall.png");
 }
 
 .tools {
@@ -302,7 +302,7 @@ h3 {
   max-width: var(--max-width-main);
 }
 .tools__right {
-  background-image: url("/Images/tools-that-we-use.png");
+  background-image: url("/Images/backgrounds/tools-that-we-use.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
