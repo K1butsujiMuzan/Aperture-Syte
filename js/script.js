@@ -1,7 +1,7 @@
 "use strict";
 
-const burgerIcon = document.querySelector(".header__inner-burger");
-const burgerContentLinks = document.querySelector(".header__inner-right");
+const burgerIcon = document.querySelector("[data-js-burger-icon]");
+const burgerContentLinks = document.querySelector("[data-js-burger-links]");
 
 burgerIcon.addEventListener("click", function() {
     burgerIcon.classList.toggle("Active");

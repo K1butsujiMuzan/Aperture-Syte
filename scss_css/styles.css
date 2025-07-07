@@ -138,7 +138,7 @@ h3 {
 
 @font-face {
   font-family: "Poppins";
-  src: url("/fonts/PoppinsRegular.woff2") format("woff2");
+  src: url("../fonts/PoppinsRegular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -149,7 +149,7 @@ h3 {
   box-sizing: border-box;
   font-size: 16px;
   overflow-x: hidden;
-  font-family: var(--font-primary) !important;
+  font-family: var(--font-primary), sans-serif;
 }
 
 .logo-link {
@@ -254,16 +254,16 @@ h3 {
   padding-inline: 1rem;
 }
 .about_us__grid-card:nth-child(1) {
-  background-image: url("/Images/aboutus/1.png");
+  background-image: url("../Images/aboutus/1.png");
 }
 .about_us__grid-card:nth-child(2) {
-  background-image: url("/Images/aboutus/2.png");
+  background-image: url("../Images/aboutus/2.png");
 }
 .about_us__grid-card:nth-child(3) {
-  background-image: url("/Images/aboutus/3.png");
+  background-image: url("../Images/aboutus/3.png");
 }
 .about_us__grid-card:nth-child(4) {
-  background-image: url("/Images/aboutus/4.png");
+  background-image: url("../Images/aboutus/4.png");
 }
 .about_us__grid-card {
   max-width: 36rem;
@@ -284,15 +284,15 @@ h3 {
 }
 
 .sunset {
-  background-image: url("/Images/backgrounds/Sunset.png");
+  background-image: url("../Images/backgrounds/Sunset.png");
 }
 
 .monstera {
-  background-image: url("/Images/backgrounds/Monstera.png");
+  background-image: url("../Images/backgrounds/Monstera.png");
 }
 
 .starfall {
-  background-image: url("/Images/backgrounds/starfall.png");
+  background-image: url("../Images/backgrounds/starfall.png");
 }
 
 .tools {
@@ -302,7 +302,7 @@ h3 {
   max-width: var(--max-width-main);
 }
 .tools__right {
-  background-image: url("/Images/backgrounds/tools-that-we-use.png");
+  background-image: url("../Images/backgrounds/tools-that-we-use.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
