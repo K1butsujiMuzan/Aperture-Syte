@@ -428,7 +428,7 @@ h3 {
     gap: 10%;
     transition: transform var(--transition-main);
   }
-  .header__inner-right.Active {
+  .header__inner-right.active {
     transform: translateX(0);
   }
   .header__inner-burger {
@@ -460,18 +460,18 @@ h3 {
     background-color: var(--color-white);
     transition: width, transform var(--transition-main);
   }
-  .header__inner-burger.Active {
+  .header__inner-burger.active {
     height: 2rem;
     aspect-ratio: 1;
     position: fixed;
     top: 2rem;
     right: 1.25rem;
   }
-  .header__inner-burger.Active span::before {
+  .header__inner-burger.active span::before {
     top: 50%;
     transform: translateY(-50%) rotate(-45deg);
   }
-  .header__inner-burger.Active span::after {
+  .header__inner-burger.active span::after {
     top: 50%;
     width: 100%;
     transform: translateY(-50%) rotate(45deg);

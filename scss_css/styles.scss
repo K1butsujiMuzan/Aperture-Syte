@@ -334,7 +334,7 @@
     transition: transform var(--transition-main);
   }
 
-  .header__inner-right.Active{
+  .header__inner-right.active{
     transform: translateX(0);
   }
 
@@ -370,7 +370,7 @@
     }
   }
 
-  .header__inner-burger.Active{
+  .header__inner-burger.active{
     height: 2rem;
     aspect-ratio: 1;
     position: fixed;

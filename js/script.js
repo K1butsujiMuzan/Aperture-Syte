@@ -1,9 +1,9 @@
-"use strict";
+'use strict';
 
-const burgerIcon = document.querySelector("[data-js-burger-icon]");
-const burgerContentLinks = document.querySelector("[data-js-burger-links]");
+const burgerIcon = document.querySelector('[data-js-burger-icon]');
+const burgerContentLinks = document.querySelector('[data-js-burger-links]');
 
-burgerIcon.addEventListener("click", function() {
-    burgerIcon.classList.toggle("Active");
-    burgerContentLinks.classList.toggle("Active");
+burgerIcon.addEventListener('click', () => {
+    burgerIcon.classList.toggle('active');
+    burgerContentLinks.classList.toggle('active');
 });
